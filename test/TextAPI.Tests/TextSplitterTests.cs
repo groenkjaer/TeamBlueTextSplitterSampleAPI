@@ -2,6 +2,7 @@ using TextAPI.Services;
 
 namespace TextAPI.Tests
 {
+    [TestFixture]
     public class TextSplitterTests
     {
         private ITextSplitter textSplitter;
@@ -29,6 +30,7 @@ namespace TextAPI.Tests
             Assert.That(distinctWords.Count(), Is.EqualTo(4));
         }
 
+        [Test]
         public void SplitAndReadOutput()
         {
             var distinctWords = textSplitter.SplitIntoDistinctWords("First Second").ToList();
