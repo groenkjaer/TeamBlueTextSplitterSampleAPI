@@ -4,7 +4,7 @@
     {
         public IEnumerable<string> SplitIntoDistinctWords(string text)
         {
-            return text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Distinct();
+            return text.Split(new char[] { ' ', ',', '.', ':', ';' }, StringSplitOptions.RemoveEmptyEntries).Distinct();
         }
     }
 }
